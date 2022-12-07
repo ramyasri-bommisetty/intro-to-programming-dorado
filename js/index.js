@@ -32,17 +32,17 @@ const messageDisplay = document.getElementById("messagebox");
 
 btn.addEventListener("click", function (e) {
   e.preventDefault();
-  const first_name = document.getElementById("first_name").value;
+  const firstName = document.getElementById("first_name").value;
   const email = document.getElementById("email").value;
   const textarea = document.getElementById("textarea").value;
 
   const message = document.createElement("li");
   const link = document.createElement("a");
   const span = document.createElement("span");
-  const removebtn = document.createElement("button");
-  removebtn.innerHTML = "remove";
-  removebtn.setAttribute("type", "button");
-  removebtn.addEventListener("click", function () {
+  const removeBtn = document.createElement("button");
+  removeBtn.innerHTML = "remove";
+  removeBtn.setAttribute("type", "button");
+  removeBtn.addEventListener("click", function () {
     messageDisplay.removeChild(message);
   });
   span.innerHTML = ` wrote ${textarea} `;
@@ -54,7 +54,5 @@ btn.addEventListener("click", function (e) {
   message.append(removeBtn);
   messageDisplay.append(message);
 
-  const messageForm = document
-    .getElementById("leave_message")
-    .requestFullscreen();
+  //const messageForm = document.getElementById("leave_message");
 });
