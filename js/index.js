@@ -54,5 +54,6 @@ btn.addEventListener("click", function (e) {
   message.append(removeBtn);
   messageDisplay.append(message);
 
-  //const messageForm = document.getElementById("leave_message");
+  const messageForm = document.getElementById("leave_message");
+  messageForm.reset();
 });
