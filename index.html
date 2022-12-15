@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    Ramya
-    <title>Personal</title>
-    <meta />
-    To-do
+    <link rel="stylesheet" href="index.css">
+    <title>Ramya Personal</title>
   </head>
   <body>
     <section>
@@ -12,25 +10,42 @@
      <p> This is Ramyasri Im a student in CTD I finished my masters in IT</p>
     </section>
     <section>
-      <h1>Experience</h1>
+      <h2>Experience</h2>
       <p>I dont have an experience in IT Connect</p>
     </section>
     <section id="skills">
       <h2>Skills</h2>
 
-      <ul></ul>
+      <ul>
     </section>
     <section>
-      <h1>connect me</h1>
+      <h1>Connect </h1>
       <p>ramyasri.bommisetty@gmail.com https://github.com/ramyasri-bommisetty</p>
     </section>
     <section>
-        <p>
-            <ul>
-        <li>Bachelors</li>
-       
-        </ul>
-        </p>
+      <h2>Leave a Message</h2>
+      <form id="leave_a_message">
+        <div>
+          <label for="first_name">FirstName</label>
+          <input type="text" id="first_name" placeholder="Firstname" name="first_name">
+        </div>
+        <div>
+          <label for="email">email</label>
+          <input type="email"id="email" placeholder="emaail@gmail.com"name="email">
+        </div>
+        <div>
+          <label for="textarea">text area</label>
+          <textarea id="textarea"></textarea>
+        </div>
+        <div>
+          <button id="Submit" type="submit">Submit</button>
+        </div>
+      </form>  
+    </section>
+    <section id="messages">
+      <h2>Messages</h2>
+      <ul id="messagebox">
+      </ul>
     </section>
     <footer></footer>
     <script src="js/index.js"></script>

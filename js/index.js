@@ -26,3 +26,34 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerHTML = skills[i];
   skillsList.appendChild(skill);
 }
+
+const btn = document.getElementById("Submit");
+const messageDisplay = document.getElementById("messagebox");
+
+btn.addEventListener("click", function (e) {
+  e.preventDefault();
+  const firstName = document.getElementById("first_name").value;
+  const email = document.getElementById("email").value;
+  const textarea = document.getElementById("textarea").value;
+
+  const message = document.createElement("li");
+  const link = document.createElement("a");
+  const span = document.createElement("span");
+  const removeBtn = document.createElement("button");
+  removeBtn.innerHTML = "remove";
+  removeBtn.setAttribute("type", "button");
+  removeBtn.addEventListener("click", function () {
+    messageDisplay.removeChild(message);
+  });
+  span.innerHTML = ` wrote ${textarea} `;
+  link.href = email;
+  link.innerHTML = firstName;
+
+  message.append(link);
+  message.append(span);
+  message.append(removeBtn);
+  messageDisplay.append(message);
+
+  const messageForm = document.getElementById("leave_message");
+  messageForm.reset();
+});
